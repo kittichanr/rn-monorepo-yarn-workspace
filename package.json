@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "name": "rn-monorepo-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "petchkubb <petchkubbb@gmail.com>",
+  "license": "MIT",
+  "workspaces": {
+    "packages": ["packages/*"],
+    "nohoist": [
+      "**/@react-native-async-storage/async-storage",
+      "**/react",
+      "**/react-dom",
+      "**/react-native",
+      "**/react-native/**",
+      "**/react-native-codegen"
+    ]
+  },
+  "scripts": {
+    "reset": "find . -type dir -name node_modules | xargs rm -rf && rm -rf yarn.lock",
+    "app1:start": "yarn workspace @my-app/app1 start",
+    "app1:ios": "yarn workspace @my-app/app1 ios",
+    "app1:android": "yarn workspace @my-app/app1 android",
+    "app2:start": "yarn workspace @my-app/app2 start",
+    "app2:ios": "yarn workspace @my-app/app2 ios",
+    "app2:android": "yarn workspace @my-app/app2 android"
+  }
+}
