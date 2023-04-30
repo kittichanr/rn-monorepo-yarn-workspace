@@ -440,36 +440,36 @@ module.exports = {
   watchFolders: {
     '/Users/me/my-app/node_modules',
     '/Users/me/my-app/packages/app/',
-    '/Users/me/my-app/packages/build-tools/',
-    '/Users/me/my-app/packages/mobile/'
+    '/Users/me/my-app/packages/app2/',
+    '/Users/me/my-app/packages/shared/'
   },
   resolver: {
     // Ensure we resolve nohoist libraries from this directory.
-    // With "((?!mobile).)", we're blocking all the cases were metro tries to
-    // resolve nohoisted libraries from a directory that is not "mobile".
+    // With "((?!app1).)", we're blocking all the cases were metro tries to
+    // resolve nohoisted libraries from a directory that is not "app1".
     blockList: exclusionList([
-      /^((?!mobile).)*\/node_modules\/@react-native-community\/cli-platform-ios\/.*$/,
-      /^((?!mobile).)*\/node_modules\/@react-native-community\/cli-platform-android\/.*$/,
-      /^((?!mobile).)*\/node_modules\/hermes-engine\/.*$/,
-      /^((?!mobile).)*\/node_modules\/jsc-android\/.*$/,
-      /^((?!mobile).)*\/node_modules\/react\/.*$/,
-      /^((?!mobile).)*\/node_modules\/react-native\/.*$/,
-      /^((?!mobile).)*\/node_modules\/react-native-codegen\/.*$/,
+      /^((?!app1).)*\/node_modules\/@react-native-community\/cli-platform-ios\/.*$/,
+      /^((?!app1).)*\/node_modules\/@react-native-community\/cli-platform-android\/.*$/,
+      /^((?!app1).)*\/node_modules\/hermes-engine\/.*$/,
+      /^((?!app1).)*\/node_modules\/jsc-android\/.*$/,
+      /^((?!app1).)*\/node_modules\/react\/.*$/,
+      /^((?!app1).)*\/node_modules\/react-native\/.*$/,
+      /^((?!app1).)*\/node_modules\/react-native-codegen\/.*$/,
     ]),
     extraNodeModules: {
       "@react-native-community/cli-platform-ios":
-        "/Users/me/my-app/packages/mobile/node_modules/@react-native-community/cli-platform-ios",
+        "/Users/me/my-app/packages/app1/node_modules/@react-native-community/cli-platform-ios",
       "@react-native-community/cli-platform-android":
-        "/Users/me/my-app/packages/mobile/node_modules/@react-native-community/cli-platform-android",
+        "/Users/me/my-app/packages/app1/node_modules/@react-native-community/cli-platform-android",
       "hermes-engine":
-        "/Users/me/my-app/packages/mobile/node_modules/hermes-engine",
+        "/Users/me/my-app/packages/app1/node_modules/hermes-engine",
       "jsc-android":
-        "/Users/me/my-app/packages/mobile/node_modules/jsc-android",
-      react: "/Users/me/my-app/packages/mobile/node_modules/react",
+        "/Users/me/my-app/packages/app1/node_modules/jsc-android",
+      react: "/Users/me/my-app/packages/app1/node_modules/react",
       "react-native":
-        "/Users/me/my-app/packages/mobile/node_modules/react-native",
+        "/Users/me/my-app/packages/app1/node_modules/react-native",
       "react-native-codegen":
-        "/Users/me/my-app/packages/mobile/node_modules/react-native-codegen",
+        "/Users/me/my-app/packages/app1/node_modules/react-native-codegen",
     },
   },
 }
