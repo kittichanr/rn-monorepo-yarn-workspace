@@ -312,9 +312,9 @@ yarn install && cd ios && pod install
 The command will fail with an error like this:
 
 ```
-[!] Invalid `Podfile` file: cannot load such file -- /Users/me/workspace/react-native-universal-monorepo-js/packages/mobile/node_modules/@react-native-community/cli-platform-ios/native_modules.
+[!] Invalid `Podfile` file: cannot load such file -- /Users/me/workspace/react-native-universal-monorepo-js/packages/app1/node_modules/@react-native-community/cli-platform-ios/native_modules.
 
- #  from /Users/me/workspace/react-native-universal-monorepo-js/packages/mobile/ios/Podfile:2
+ #  from /Users/me/workspace/react-native-universal-monorepo-js/packages/app1/ios/Podfile:2
  #  -------------------------------------------
  #  require_relative '../node_modules/react-native/scripts/react_native_pods'
  >  require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
